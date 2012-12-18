@@ -1,0 +1,10 @@
+<%= simple_form_for @cheese do |form| %>
+
+<%= form.input :name %>
+
+<%= form.input :color, :as => :select, :collection => ['Red', 'Green', 'Bleu'] %>
+
+<%= form.association :category, :as => :check_boxes%>
+
+<%= form.button :submit %>
+<% end %>

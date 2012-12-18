@@ -1,0 +1,21 @@
+<table class="table table-bordered table-striped">
+	
+	<tr>
+		<th>Name
+		</th>
+		<th>Color
+		</th>
+	<% @cheeses.each do |cheese| %>
+	<tr>
+		<td>
+			<%= link_to cheese.name, cheese %>
+		</td>
+		<td>
+			<%= cheese.color %>
+		</td>
+	</tr>
+	
+	<% end %>
+</table>
+
+<%= link_to "MAKE A NEW CHEESE PLS" ,new_cheese_path, :class=> 'btn btn-success btn-large'%>
